@@ -20,7 +20,7 @@ if output is None:
 else:
     output = output.split('\n')[2:]
 
-update_list = [i.split(' ')[0] for i in output]
+update_list = [i.split(' ')[0] for i in output if i is not None]
 
 if len(update_list) == 0:
     print('All packages are up-to-date.')
